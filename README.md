@@ -1,4 +1,4 @@
 ## Init
 
 ## Arrays 
-[Arrays](/Arrays)
+[Arrays](/Arrays.md)
