@@ -1,5 +1,4 @@
 ## Init
 
 ## Arrays 
-![[Arrays]]
-
+[Arrays](/Arrays)
