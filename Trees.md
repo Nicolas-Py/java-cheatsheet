@@ -1,5 +1,6 @@
 
-# Binary tree in order
+# Binary tree
+## Inorder
 ### Iterative
 ```Java
 class Solution {
@@ -20,7 +21,7 @@ class Solution {
 }
 ```
 
-### - Recursive
+### Recursive
 ```Java
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -37,8 +38,8 @@ class Solution {
 }
 ```
 
-# Binary tree pre order:
-## - Iterative
+## Binary tree pre order:
+### Iterative
 ```Java
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
@@ -59,7 +60,7 @@ class Solution {
 }
 ```
 
-## - Recursive
+### Recursive
 ```Java
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
@@ -76,8 +77,8 @@ class Solution {
 }
 ```
 
-# Binary tree post order
-## - Iterative
+## Binary tree post order
+## Iterative
 ```Java
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -98,7 +99,7 @@ class Solution {
 }
 ```
 
-## - Recursive
+## Recursive
 ```Java
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -115,8 +116,9 @@ class Solution {
 }
 ```
 
-# N-ary tree Pre order:
-## Recursive
+# N-ary tree
+## Preorder
+### Recursive
 ```Java
 class Solution {
 	public List<Integer> preorder(Node root) {

@@ -2,3 +2,4 @@
 !/.obsidian/
 .obsidian/workspace.json
 .DS_Store
+*.json
