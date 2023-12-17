@@ -2,3 +2,5 @@
 !/.obsidian/
 .obsidian/workspace.json
 .DS_Store
+.idea/java-cheatsheet.iml
+.idea/
