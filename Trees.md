@@ -1,6 +1,6 @@
 
-# Binary tree in order:
-### - Iterative
+# Binary tree in order
+### Iterative
 ```Java
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
