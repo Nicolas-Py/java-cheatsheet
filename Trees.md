@@ -79,7 +79,7 @@ class Solution {
 ```
 
 ### Binary tree post order
-### Iterative
+#### Iterative
 ```Java
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -100,7 +100,7 @@ class Solution {
 }
 ```
 
-### Recursive
+#### Recursive
 ```Java
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
