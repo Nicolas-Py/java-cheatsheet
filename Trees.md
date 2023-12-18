@@ -1,9 +1,8 @@
-
-# Binary tree
-## Inorder
+# Depth first search
+## Binary tree
+### Inorder
 If you search a BST "Inorder" you will receive the nodes "sorted"
-
-### Iterative
+#### Iterative
 ```Java
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -23,7 +22,7 @@ class Solution {
 }
 ```
 
-### Recursive
+#### Recursive
 ```Java
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -40,8 +39,8 @@ class Solution {
 }
 ```
 
-## Binary tree pre order:
-### Iterative
+### Binary tree pre order:
+#### Iterative
 ```Java
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
@@ -62,7 +61,7 @@ class Solution {
 }
 ```
 
-### Recursive
+#### Recursive
 ```Java
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
@@ -79,8 +78,8 @@ class Solution {
 }
 ```
 
-## Binary tree post order
-## Iterative
+### Binary tree post order
+### Iterative
 ```Java
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -101,7 +100,7 @@ class Solution {
 }
 ```
 
-## Recursive
+### Recursive
 ```Java
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -118,9 +117,9 @@ class Solution {
 }
 ```
 
-# N-ary tree
-## Preorder
-### Recursive
+## N-ary tree
+### Pre order
+#### Recursive
 ```Java
 class Solution {
 	public List<Integer> preorder(Node root) {
@@ -139,3 +138,23 @@ class Solution {
 }
 ```
 
+### Post order
+#### Recursive
+```Java
+class Solution {
+	public List<Integer> postorder(Node root) {
+		return dfs(root, new ArrayList<Integer>());
+	}
+	
+	private List<Integer> dfs(Node root, List<Integer> list) {
+	if (root == null) return list;
+	
+	for (Node child: root.children) {
+		list = dfs(child, list);
+	}
+	
+	list.add(root.val);
+	return list;
+	}
+}
+```
