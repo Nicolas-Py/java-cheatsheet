@@ -1,6 +1,8 @@
 
 # Binary tree
 ## Inorder
+If you search a BST "Inorder" you will receive the nodes "sorted"
+
 ### Iterative
 ```Java
 class Solution {
