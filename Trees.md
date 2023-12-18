@@ -191,3 +191,31 @@ class Solution {
 	}
 }
 ```
+
+# Max Depth of  tree
+### Binary tree
+```Java
+class Solution {
+	public int maxDepth(TreeNode root) {
+		if (root == null) return 0;
+		return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+	}
+}
+```
+### N-ary tree
+```Java
+class Solution {
+	public int maxDepth(Node root) {
+		return (getMaxDepth(root, 0));
+	}
+
+	public int getMaxDepth(Node root, int depth) {
+		if (root == null) return 0;
+			int maxDepth = depth+1;
+		for (Node child: root.children) {
+			maxDepth = Math.max(maxDepth, getMaxDepth(child, depth+1));
+		}
+		return maxDepth;
+		}
+}
+```
