@@ -219,3 +219,55 @@ class Solution {
 		}
 }
 ```
+
+# Identical
+
+### Binary Tree
+
+(Scuffed Nico Approach)
+```Java
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if(q==null&&p==null) {
+            return true;
+        } else if (q==null||p==null) {
+            return false;
+        }
+        return Objects.equals(traverse(p), traverse(q));
+    }
+
+    public List<Integer> traverse(TreeNode root) {
+        return traverse(root, new ArrayList<Integer>());
+    }
+
+
+    public List<Integer> traverse(TreeNode root, List<Integer> list) {
+        list.add(root.val);
+        list.addAll(traverseL(root.left, list));
+        list.addAll(traverseR(root.right, list));
+        return list;
+    }
+
+    public List<Integer> traverseL(TreeNode root, List<Integer> list) {
+        if (root==null) {
+            list.add(-2);
+            return list;
+        }
+        list.add(root.val);
+        list = traverseL(root.left, list);
+        list = traverseR(root.right, list);
+        return list;
+    }
+
+    public List<Integer> traverseR(TreeNode root, List<Integer> list) {
+        if (root==null) {
+            list.add(-1);
+            return list;
+            }
+        list.add(root.val);
+        list = traverseL(root.left, list);
+        list = traverseR(root.right, list);
+        return list;
+    }
+}
+```
