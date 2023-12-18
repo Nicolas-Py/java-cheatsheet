@@ -11,6 +11,7 @@
 - DFS (InOrder, PreOrder, PostOrder)
 - BFS
 - Depth
+- Identical
 
 
 ## [Iterator](/Iterator.md)
