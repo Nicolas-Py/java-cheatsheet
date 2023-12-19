@@ -257,3 +257,32 @@ class Solution {
     }
 }
 ```
+
+# List to Tree
+
+### Sorted array to balanced BST
+```java
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        if(nums.length==1) {return new TreeNode(nums[0]);}
+        if(nums.length==0) {return null;}
+        int half = nums.length/2;
+        TreeNode root = new TreeNode(nums[half]);
+        int[] left = new int[half];
+        int i = 0;
+        for (; i<half; i++) {
+            left[i]=nums[i];
+        }
+        i++;
+        int[] right = new int[nums.length-left.length-1];
+        for (int j = 0; i<nums.length; j++) {
+            right[j]=nums[i];
+            i++;
+        }
+        root.left = sortedArrayToBST(left);
+        root.right = sortedArrayToBST(right);
+    
+        return root;
+    }
+}
+```
