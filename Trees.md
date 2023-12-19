@@ -206,17 +206,18 @@ class Solution {
 ```Java
 class Solution {
 	public int maxDepth(Node root) {
-		return (getMaxDepth(root, 0));
+		return dfs(root, 1);
 	}
 
-	public int getMaxDepth(Node root, int depth) {
+	private int dfs(Node root, int depth) {
 		if (root == null) return 0;
-			int maxDepth = depth+1;
+		
+		int maxDepth = depth;
 		for (Node child: root.children) {
-			maxDepth = Math.max(maxDepth, getMaxDepth(child, depth+1));
+			maxDepth = Math.max(maxDepth, dfs(child, depth+1));
 		}
 		return maxDepth;
-		}
+	}
 }
 ```
 
@@ -228,50 +229,13 @@ class Solution {
 ```Java
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        if(q==null&&p==null) {
-            return true;
-        } else if (q==null||p==null) {
-            return false;
-        }
-        return Objects.equals(traverse(p), traverse(q));
-    }
-
-    public List<Integer> traverse(TreeNode root) {
-        return traverse(root, new ArrayList<Integer>());
-    }
-
-
-    public List<Integer> traverse(TreeNode root, List<Integer> list) {
-        list.add(root.val);
-        list.addAll(traverseL(root.left, list));
-        list.addAll(traverseR(root.right, list));
-        return list;
-    }
-
-    public List<Integer> traverseL(TreeNode root, List<Integer> list) {
-        if (root==null) {
-            list.add(-2);
-            return list;
-        }
-        list.add(root.val);
-        list = traverseL(root.left, list);
-        list = traverseR(root.right, list);
-        return list;
-    }
-
-    public List<Integer> traverseR(TreeNode root, List<Integer> list) {
-        if (root==null) {
-            list.add(-1);
-            return list;
-            }
-        list.add(root.val);
-        list = traverseL(root.left, list);
-        list = traverseR(root.right, list);
-        return list;
+        if (p == null && q == null) return true;
+		if (p == null || q == null) return false;
+		if (p.val != q.val) return false;
+		return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 }
 ```
-
 # Invert
 ### Binary Tree
 ``` java
