@@ -261,6 +261,7 @@ class Solution {
 # List to Tree
 
 ### Sorted array to balanced BST
+#### no helper function
 ```java
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
@@ -286,6 +287,24 @@ class Solution {
     }
 }
 ```
+#### with helper funciton
+```Java
+class Solution {
+	public TreeNode sortedArrayToBST(int[] nums) {
+		return dfs(nums, 0, nums.length-1);
+	}
+		
+	private TreeNode dfs(int[] nums, int start, int end) {
+		if (start > end) return null;
+		int middle = (start+end)/2;
+		TreeNode root = new TreeNode(nums[middle]);
+		root.left = dfs(nums, start, middle-1);
+		root.right = dfs(nums, middle+1, end);
+		return root;
+	}
+}
+```
+
 # Merge two binary trees
 ```Java
 class Solution {
