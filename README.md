@@ -12,6 +12,9 @@
 - BFS
 - Depth
 - Identical
+- Invert
+- List to tree
+- Merge two trees
 
 
 ## [Iterator](/Iterator.md)
