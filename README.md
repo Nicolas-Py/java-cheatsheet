@@ -23,3 +23,4 @@ An `Iterator` is an object that can be used to loop through collections, like�
 ## [Generics](/Generics.md)
 
 ## [[Linked List]]
+- reverse linked list
