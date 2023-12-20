@@ -287,7 +287,7 @@ class Solution {
     }
 }
 ```
-#### with helper funciton
+#### with function
 ```Java
 class Solution {
 	public TreeNode sortedArrayToBST(int[] nums) {
