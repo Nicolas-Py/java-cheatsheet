@@ -1,4 +1,4 @@
-
+All the code is our own. Eventhough a lot of similar code is on leet we only saved our own solutions to leet problems here. (Pls no Exmatrikulation^^)
 
 ## [TestData](/TestData.md)
 - Arrays
