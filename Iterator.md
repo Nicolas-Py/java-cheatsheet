@@ -27,3 +27,43 @@ public class BSTIterator {
 }
 ```
 
+### Nested Lists
+Pretty bad but "elegant"
+```java
+public class NestedIterator implements Iterator<Integer> {
+    
+    private Queue<Integer> flatInt;  
+    private ArrayList<Integer> flatInteger = new ArrayList<>();
+    public NestedIterator(List<NestedInteger> nestedList) {
+        for (NestedInteger x: nestedList) {
+            unZip(x, flatInteger);
+        }
+        flatInt = new LinkedList<>(flatInteger);
+    }
+
+    @Override
+    public Integer next() {
+        return flatInt.remove();
+    }
+
+    @Override
+    public boolean hasNext() {
+         return !flatInt.isEmpty();
+    }
+
+    private void unZip(NestedInteger x, ArrayList<Integer> list) {
+        if (x.isInteger()) {
+            list.add(x.getInteger());
+        } else {
+	        List<NestedInteger> temp = x.getList();
+	        for (int i = 0; i<temp.size(); i++) {
+	          if (temp.get(i).isInteger()) {
+	                list.add(temp.get(i).getInteger());
+	          } else {
+	                unZip(temp.get(i), list);
+	          }
+	        }
+        }
+    }
+}
+```
