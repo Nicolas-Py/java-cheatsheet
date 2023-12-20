@@ -1,4 +1,4 @@
-
+### Trees
 BST with stack
 ```java
 public class BSTIterator {
@@ -24,3 +24,4 @@ public class BSTIterator {
     }
 }
 ```
+

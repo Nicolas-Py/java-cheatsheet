@@ -261,7 +261,7 @@ class Solution {
 # List to Tree
 
 ### Sorted array to balanced BST
-#### no helper function
+#### no helper function (Quite proud of it ^^)
 ```java
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {

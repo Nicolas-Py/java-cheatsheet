@@ -232,7 +232,7 @@ public static void mergeSort(int[] array) {
 private static void merge(int[] leftArray, int[] rightArray, int[] array) {  
     int leftSize = array.length / 2;  
     int rightSize = array.length-leftSize;  
-    int i=0, l=0, r=0;  
+    int i=0, l=0, r=0; // index for Array, Left, Right
   
     while(l<leftSize && r<rightSize) {  
         if (leftArray[l] < rightArray[r]) {  
