@@ -22,5 +22,5 @@ All the code is our own. Eventhough a lot of similar code is on leet we only sav
 - BST
 ## [Generics](/Generics.md)
 
-## [Linked List](/LinkedList)
+## [Linked List](/LinkedList.md)
 - reverse linked list
