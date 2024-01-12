@@ -15,11 +15,9 @@ All the code is our own. Eventhough a lot of similar code is on leet we only sav
 - List to tree
 - Merge two trees
 
-
+## [Streams](/Streams.md)
 ## [Iterator](/Iterator.md)
 - BST
-
-
 ## [Generics](/Generics.md)
 
 ## [[Linked List]]
