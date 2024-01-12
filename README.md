@@ -16,9 +16,11 @@ All the code is our own. Eventhough a lot of similar code is on leet we only sav
 - Merge two trees
 
 ## [Streams](/Streams.md)
+
+## [Read/Write Files](/IO.md)
 ## [Iterator](/Iterator.md)
 - BST
 ## [Generics](/Generics.md)
 
-## [[Linked List]]
+## [Linked List](/LinkedList)
 - reverse linked list
