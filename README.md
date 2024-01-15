@@ -16,6 +16,9 @@ All the code is our own. Eventhough a lot of similar code is on leet we only sav
 - Merge two trees
 
 ## [Streams](/Streams.md)
+- Covert to different data types
+
+## [Threads](/Threads.md)
 
 ## [Read/Write Files](/IO.md)
 ## [Iterator](/Iterator.md)
