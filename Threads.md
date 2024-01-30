@@ -1,7 +1,38 @@
+# How to create Threads
+
+### With Runnable Interface
+``` java
+public static void example() {
+	Thread t1 = new Thread(new MyRunnable()); 
+	// Note MyRunnable needs to implemt runnable and overide its run() func
+}
+
+```
+### Like a normal Human
+``` java
+public class MyThread extends Thread {
+	private string name;
+	public MyThread(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public void run(){
+	// smth
+	}
+
+}
+
+public static void example() {
+	Thread t1 = new MyThread("Test"); 
+}
+
+```
+
 # Locks
 
 ## ReentrantReadWriteLock
-Certainly! The `ReentrantReadWriteLock` in Java is a type of lock that allows multiple threads to read a certain resource simultaneously, but only one thread to write to the resource at any given time. It's an implementation of the `ReadWriteLock` interface introduced in Java to provide a more flexible locking mechanism than the traditional `synchronized` keyword.
+The `ReentrantReadWriteLock` in Java is a type of lock that allows multiple threads to read a certain resource simultaneously, but only one thread to write to the resource at any given time. It's an implementation of the `ReadWriteLock` interface introduced in Java to provide a more flexible locking mechanism than the traditional `synchronized` keyword.
 
 Here are the main functions of `ReentrantReadWriteLock`:
 
