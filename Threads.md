@@ -31,6 +31,10 @@ public static void example() {
 
 ```
 
+# Difference run() vs start()
+ThreadObj.run() => called die run methode des objektes und führt diese in main thread aus (was keinen fkn sinn macht)
+
+ThreadObj.start() => erstellt einen neuen thread neben den main und führt auf diesen die run Methode aus (parallel zur main was sinn macht)
 # Locks
 
 ## ReentrantReadWriteLock
