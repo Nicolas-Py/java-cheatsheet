@@ -3,7 +3,7 @@ All the code is our own. Eventhough a lot of similar code is on leet we only sav
 ## [TestData](/TestData.md)
 - Arrays
 
-# [Eidi](/Eidi.md)
+## [Eidi](/Eidi.md)
 ## [Arrays](/Arrays.md)
 - Array Operations
 
