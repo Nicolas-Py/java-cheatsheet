@@ -3,8 +3,10 @@
 ### With Runnable Interface
 ``` java
 public static void example() {
-	Thread t1 = new Thread(new MyRunnable()); 
-	// Note MyRunnable needs to implemt runnable and overide its run() func
+	Thread t1 = new Thread(() -> {
+		// override of run() func 
+	}); 
+	
 }
 
 ```
