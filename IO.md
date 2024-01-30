@@ -2,7 +2,7 @@
 
 ### BufferedReader
 
-Your inline text here with an <img src="image.png" alt="inline drawing" width="200px" style="float:right; margin-right:0px;" /> image.
+ <img src="image.png" alt="inline drawing" width="200px" style="float:right; margin-right:0px;" /> 
 
 A BufferedReader is used to read data from a source in Java <br>
 
@@ -61,9 +61,9 @@ public void writeToFile(String path){
 
 ```java
 try{
-String output = writer.readLine();
-int age =Integer.parseInt( writer.readLine());
-double weight = Double.parseDouble(writer.readLine());
+writer.write(age);
+writer.write(name);
+writer.write(weight);
 }
 catch(IOException e){
     e.printStackTrace();
