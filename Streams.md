@@ -92,7 +92,17 @@ Map<String, List<TrainConnection>> typeToConnections = connections
                 .collect(Collectors.groupingBy(TrainConnection::type));
 ```
 
+### Stream to Map< K, < Anything > (even more useful)
+Variation of function above where you pass a second argument (Collector) in .groupingBy() to get e.g. an average.
 
+``` java
+connections.flatMap(trainConnection -> trainConnection.stops().stream()).collect(Collectors.groupingBy(trainStop -> trainStop.actual().getHour(), Collectors.averagingDouble(TrainStop::getDelay)));
+```
+
+this would be the second Collector in this example
+```java 
+Collectors.averagingDouble(TrainStop::getDelay)
+```
 ### Map to Primitive
 
 - per default, the elements in a stream are always objects, if you want to apply a functions specific to primitve types, a conversion is required.
