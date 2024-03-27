@@ -1,6 +1,6 @@
-# Java Steams <img src="image-8.webp" alt="inline drawing" width="200px" style="float:right; margin-right:0px;" />
+# Java Steams
 
-## Usefull Stream Methods
+## Useful Stream Methods
 
 Example on a basic Array:
 
@@ -41,7 +41,7 @@ Arrays.stream(numbers).takeWhile(number -> number < 10);
 ---
 <br>
 
-- the `dropWhile()` operation is basically the oposite of `takeWhile`, it takes a `predicate` as an parameter, and removes elements from the stream until the first element does not satisfy the condition.
+- the `dropWhile()` operation is basically the opposite of `takeWhile`, it takes a `predicate` as an parameter, and removes elements from the stream until the first element does not satisfy the condition.
 
 ```java
 int[] numbers = new int[] {3,4,5,11,6,20};
